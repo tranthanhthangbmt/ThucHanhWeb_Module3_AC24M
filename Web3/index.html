@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinRate Hub - Sàn Tỷ Giá Realtime</title>
+    <meta name="description"
+        content="Cập nhật tỷ giá ngoại tệ, lãi suất ngân hàng Realtime. So sánh tỷ giá USD, EUR, JPY tốt nhất. Công cụ cho kế toán thanh toán.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Chart.js for charts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <a href="../index.html" class="back-to-menu-btn">⬅ Trang Chủ</a>
+
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar">
+        <div class="brand">
+            <i class="fas fa-chart-line"></i> FinRate Hub
+        </div>
+        <ul class="nav-links">
+            <li><a href="#dashboard" class="active"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+            <li><a href="#comparison"><i class="fas fa-exchange-alt"></i> So Sánh Tỷ Giá</a></li>
+            <li><a href="#analysis"><i class="fas fa-robot"></i> AI Phân Tích</a></li>
+            <li><a href="#converter"><i class="fas fa-calculator"></i> Quy Đổi</a></li>
+        </ul>
+        <div class="user-profile">
+            <img src="https://ui-avatars.com/api/?name=Admin&background=random" alt="User">
+            <span>Kế toán viên</span>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Dashboard Section -->
+        <section id="dashboard">
+            <header class="top-bar">
+                <h2>Thị Trường Hôm Nay</h2>
+                <div class="date-time">
+                    <i class="far fa-clock"></i> <span id="current-time">Loading...</span>
+                </div>
+            </header>
+
+            <!-- Ticker Tape -->
+            <div class="ticker-wrap">
+                <div class="ticker">
+                    <div class="ticker-item"><i class="fas fa-arrow-up up"></i> USD/VND: 25,120</div>
+                    <div class="ticker-item"><i class="fas fa-arrow-down down"></i> EUR/VND: 27,450</div>
+                    <div class="ticker-item"><i class="fas fa-arrow-up up"></i> JPY/VND: 165.5</div>
+                    <div class="ticker-item"><i class="fas fa-minus steady"></i> GBP/VND: 31,200</div>
+                    <div class="ticker-item"><i class="fas fa-arrow-up up"></i> Vàng SJC: 78.50M</div>
+                </div>
+            </div>
+
+            <!-- Charts Grid -->
+            <div class="charts-grid">
+                <div class="chart-card main-chart">
+                    <div class="card-header">
+                        <h3>Biến Động Tỷ Giá USD (30 Ngày)</h3>
+                        <div class="chart-controls">
+                            <button class="active">USD</button>
+                            <button>EUR</button>
+                            <button>JPY</button>
+                        </div>
+                    </div>
+                    <div class="canvas-container">
+                        <canvas id="rateChart"></canvas>
+                    </div>
+                </div>
+                <div class="chart-card side-chart">
+                    <div class="card-header">
+                        <h3>Lãi Suất Liên Ngân Hàng</h3>
+                    </div>
+                    <div class="canvas-container">
+                        <canvas id="interestChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AI Analysis Section -->
+        <section id="analysis" class="content-section">
+            <div class="ai-analysis-box">
+                <div class="ai-header">
+                    <i class="fas fa-brain"></i>
+                    <h3>Nhận Định Chuyên Gia AI (Powered by Gemini)</h3>
+                </div>
+                <div class="ai-body">
+                    <h4>Dự Báo Xu Hướng Tỷ Giá USD Cuối Năm</h4>
+                    <p>
+                        "Dưới góc độ phân tích kỹ thuật và vĩ mô, thị trường ngoại hối (Forex) đang chịu tác động mạnh
+                        mẽ
+                        từ kỳ vọng Cục Dự trữ Liên bang Mỹ (FED) sẽ nới lỏng chính sách tiền tệ. Nếu FED thực hiện đợt
+                        cắt
+                        giảm lãi suất vào quý 4, chỉ số DXY (Sức mạnh đồng Đô la Mỹ) nhiều khả năng sẽ hạ nhiệt, giúp
+                        giảm
+                        áp lực lên tỷ giá USD/VND.
+                        <br><br>
+                        Tuy nhiên, cán cân thanh toán quốc tế và nhu cầu nhập khẩu nguyên liệu cuối năm của các doanh
+                        nghiệp
+                        trong nước vẫn là biến số cần theo dõi. Dự báo tỷ giá USD/VND sẽ dao động trong biên độ hẹp
+                        <strong>24.800 - 25.200</strong>. Các doanh nghiệp xuất nhập khẩu nên cân nhắc sử dụng các công
+                        cụ
+                        phái sinh như hợp đồng kỳ hạn (Forward) để phòng ngừa rủi ro tỷ giá."
+                    </p>
+                    <div class="ai-footer">
+                        <span>Cập nhật: 15 phút trước</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Comparison Section -->
+        <section id="comparison" class="content-section">
+            <h3>So Sánh Tỷ Giá Bán USD (Live)</h3>
+            <div class="table-container">
+                <table class="rate-table">
+                    <thead>
+                        <tr>
+                            <th>Ngân Hàng</th>
+                            <th>Mua Tiền Mặt</th>
+                            <th>Mua Chuyển Khoản</th>
+                            <th>Bán Ra <i class="fas fa-sort-amount-down-alt"></i></th>
+                            <th>Trạng Thái</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="highlight-row">
+                            <td><img src="https://logo.clearbit.com/vietcombank.com.vn" class="bank-logo"> Vietcombank
+                            </td>
+                            <td>24,800</td>
+                            <td>24,830</td>
+                            <td class="best-rate">25,120 <span class="badge">Rẻ Nhất</span></td>
+                            <td><span class="status-dot online"></span> Ổn định</td>
+                        </tr>
+                        <tr>
+                            <td><img src="https://logo.clearbit.com/techcombank.com.vn" class="bank-logo"> Techcombank
+                            </td>
+                            <td>24,790</td>
+                            <td>24,820</td>
+                            <td>25,150</td>
+                            <td><span class="status-dot"></span> Tăng nhẹ</td>
+                        </tr>
+                        <tr>
+                            <td><img src="https://logo.clearbit.com/acb.com.vn" class="bank-logo"> ACB</td>
+                            <td>24,810</td>
+                            <td>24,840</td>
+                            <td>25,140</td>
+                            <td><span class="status-dot"></span> Ổn định</td>
+                        </tr>
+                        <tr>
+                            <td><img src="https://logo.clearbit.com/bidv.com.vn" class="bank-logo"> BIDV</td>
+                            <td>24,800</td>
+                            <td>24,830</td>
+                            <td>25,130</td>
+                            <td><span class="status-dot"></span> Ổn định</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Converter Tool -->
+        <section id="converter" class="content-section">
+            <div class="converter-box">
+                <h3>Công Cụ Quy Đổi Nhanh</h3>
+                <form class="converter-form" onsubmit="return false">
+                    <div class="input-group">
+                        <label>Số tiền</label>
+                        <input type="number" value="1000" id="amount">
+                    </div>
+                    <div class="input-group">
+                        <label>Từ</label>
+                        <select id="fromCurrency">
+                            <option value="USD">USD - Đô la Mỹ</option>
+                            <option value="EUR">EUR - Euro</option>
+                            <option value="JPY">JPY - Yên Nhật</option>
+                            <option value="VND">VND - Việt Nam Đồng</option>
+                        </select>
+                    </div>
+                    <div class="exchange-icon">
+                        <i class="fas fa-exchange-alt"></i>
+                    </div>
+                    <div class="input-group">
+                        <label>Sang</label>
+                        <select id="toCurrency">
+                            <option value="VND" selected>VND - Việt Nam Đồng</option>
+                            <option value="USD">USD - Đô la Mỹ</option>
+                        </select>
+                    </div>
+                    <div class="result-box">
+                        <p>Kết quả ước tính:</p>
+                        <h2 id="resultValue">25,120,000 VND</h2>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 FinRate Hub. Dữ liệu được cào tự động từ website các NHTM. Đề tài lớp AC24M.</p>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+    <script>
+        // Update Time
+        function updateTime() {
+            const now = new Date();
+            document.getElementById('current-time').innerText = now.toLocaleString('vi-VN');
+        }
+        setInterval(updateTime, 1000);
+        updateTime();
+
+        // Initialize Charts (Simulated Data)
+        const ctx = document.getElementById('rateChart').getContext('2d');
+        const rateChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['1/12', '3/12', '5/12', '7/12', '9/12', '11/12', '13/12', '15/12'],
+                datasets: [{
+                    label: 'Tỷ giá bán USD (VCB)',
+                    data: [24900, 24950, 25000, 24980, 25050, 25100, 25120, 25120],
+                    borderColor: '#2ecc71',
+                    backgroundColor: 'rgba(46, 204, 113, 0.1)',
+                    tension: 0.4,
+                    fill: true
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { labels: { color: '#ccc' } }
+                },
+                scales: {
+                    y: { grid: { color: '#333' }, ticks: { color: '#aaa' } },
+                    x: { grid: { color: '#333' }, ticks: { color: '#aaa' } }
+                }
+            }
+        });
+
+        // Simple Interest Chart
+        const ctx2 = document.getElementById('interestChart').getContext('2d');
+        new Chart(ctx2, {
+            type: 'bar',
+            data: {
+                labels: ['ON', '1W', '1M', '3M', '6M'],
+                datasets: [{
+                    label: 'Lãi suất VND (%)',
+                    data: [2.5, 3.0, 3.8, 4.5, 5.2],
+                    backgroundColor: '#3498db'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { legend: { display: false } },
+                scales: {
+                    y: { grid: { color: '#333' }, ticks: { color: '#aaa' } },
+                    x: { grid: { display: false }, ticks: { color: '#aaa' } }
+                }
+            }
+        });
+
+        // Simple Converter Logic
+        const amountInput = document.getElementById('amount');
+        const fromSelect = document.getElementById('fromCurrency');
+        const toSelect = document.getElementById('toCurrency');
+        const resultEl = document.getElementById('resultValue');
+
+        function convert() {
+            const amount = parseFloat(amountInput.value);
+            const from = fromSelect.value;
+            const to = toSelect.value;
+            let rate = 1;
+
+            // Mock rates relative to VND
+            const rates = {
+                'USD': 25120,
+                'EUR': 27450,
+                'JPY': 165.5,
+                'VND': 1
+            };
+
+            if (from !== 'VND' && to === 'VND') {
+                rate = rates[from];
+            } else if (from === 'VND' && to !== 'VND') {
+                rate = 1 / rates[to];
+            } else if (from !== 'VND' && to !== 'VND') {
+                rate = rates[from] / rates[to];
+            }
+
+            const result = amount * rate;
+            resultEl.innerText = result.toLocaleString('vi-VN', { maximumFractionDigits: 2 }) + ' ' + to;
+        }
+
+        amountInput.addEventListener('input', convert);
+        fromSelect.addEventListener('change', convert);
+        toSelect.addEventListener('change', convert);
+    </script>
+</body>
+
+</html>

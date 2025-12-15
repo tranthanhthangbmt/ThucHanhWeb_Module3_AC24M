@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Invoice Checker - Soi Kính Lúp Hóa Đơn</title>
+    <meta name="description"
+        content="Công cụ kiểm tra tình trạng hoạt động doanh nghiệp, phát hiện hóa đơn rủi ro, bỏ trốn. Dành cho kế toán mua vào.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&family=Inter:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <a href="../index.html" class="back-to-menu-btn">⬅ Trang Chủ</a>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-content">
+            <div class="logo">
+                <i class="fas fa-search-dollar"></i> E-Invoice Checker
+            </div>
+            <ul class="nav-links">
+                <li><a href="#checker">Tra Cứu</a></li>
+                <li><a href="#upload">Upload XML</a></li>
+                <li><a href="#blacklist">Blacklist</a></li>
+                <li><a href="#guide">Hướng Dẫn</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero / Checker Section -->
+    <section id="checker" class="hero-section">
+        <div class="container hero-content">
+            <h1>Soi Kính Lúp <span class="highlight">Hóa Đơn</span></h1>
+            <p class="hero-subtitle">Phát hiện ngay doanh nghiệp bỏ trốn, hóa đơn giả mạo chỉ trong 1 giây.</p>
+
+            <div class="search-box">
+                <div class="search-input-group">
+                    <i class="fas fa-id-card"></i>
+                    <input type="text" id="mstInput" placeholder="Nhập Mã Số Thuế doanh nghiệp...">
+                    <button class="btn-check" onclick="checkMST()">Kiểm Tra Ngay</button>
+                </div>
+                <div id="searchResult" class="search-result" style="display: none;">
+                    <!-- Result injected by JS -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Upload Section -->
+    <section id="upload" class="upload-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Kiểm Tra Hóa Đơn XML Hàng Loạt</h2>
+                <p>Kéo thả file .xml hóa đơn điện tử vào đây để phân tích tính hợp lệ.</p>
+            </div>
+
+            <div class="upload-area" id="drop-zone">
+                <i class="fas fa-cloud-upload-alt upload-icon"></i>
+                <h3>Kéo thả file XML hoặc click để tải lên</h3>
+                <p>Hỗ trợ chuẩn XML Nghị định 123/2020/NĐ-CP</p>
+                <input type="file" id="fileElem" multiple accept=".xml" style="display:none">
+                <button class="btn-upload" onclick="document.getElementById('fileElem').click()">Chọn File</button>
+            </div>
+
+            <!-- AI Privacy Policy -->
+            <div class="privacy-box">
+                <div class="privacy-header">
+                    <i class="fas fa-shield-alt"></i>
+                    <h4>Cam Kết Bảo Mật Dữ Liệu (AI Generated Clause)</h4>
+                </div>
+                <p>
+                    "Chúng tôi hiểu rằng dữ liệu hóa đơn là tài sản quý giá và nhạy cảm của doanh nghiệp bạn. E-Invoice
+                    Checker cam kết tuân thủ nghiêm ngặt <strong>Luật An ninh mạng</strong> và các quy định về bảo vệ dữ
+                    liệu cá nhân.
+                    Mọi tập tin bạn tải lên chỉ được xử lý tạm thời trên bộ nhớ RAM (In-memory processing) để thực hiện
+                    thuật toán kiểm tra tính hợp lệ, và sẽ bị <strong>xóa vĩnh viễn</strong> ngay lập tức sau khi kết
+                    quả được trả về.
+                    Tuyệt đối KHÔNG có bất kỳ dữ liệu nào được lưu trữ lại trên máy chủ của chúng tôi hay chia sẻ với
+                    bên
+                    thứ ba. Sự an toàn và bí mật kinh doanh của bạn là ưu tiên hàng đầu, không thể thương lượng."
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blacklist Section -->
+    <section id="blacklist" class="blacklist-section">
+        <div class="container">
+            <div class="section-header">
+                <h2><i class="fas fa-exclamation-triangle warning-icon"></i> Blacklist Doanh Nghiệp Rủi Ro</h2>
+                <p>Danh sách các công ty có dấu hiệu bỏ trốn, mua bán hóa đơn bất hợp pháp (Dữ liệu giả lập).</p>
+            </div>
+
+            <div class="table-responsive">
+                <table class="blacklist-table">
+                    <thead>
+                        <tr>
+                            <th>Mã Số Thuế</th>
+                            <th>Tên Doanh Nghiệp</th>
+                            <th>Tình Trạng</th>
+                            <th>Ngày Cập Nhật</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>0101234567</td>
+                            <td>Công ty TNHH Thương Mại Ma Ảo</td>
+                            <td><span class="badge badge-danger">Bỏ trốn</span></td>
+                            <td>15/12/2025</td>
+                        </tr>
+                        <tr>
+                            <td>0309876543</td>
+                            <td>DNTN Xây Dựng Rỗng Tuếch</td>
+                            <td><span class="badge badge-warning">Ngừng hoạt động</span></td>
+                            <td>10/12/2025</td>
+                        </tr>
+                        <tr>
+                            <td>0405556667</td>
+                            <td>Công ty CP Dịch Vụ Mua Bán Hóa Đơn</td>
+                            <td><span class="badge badge-danger">Cưỡng chế thuế</span></td>
+                            <td>05/12/2025</td>
+                        </tr>
+                        <tr>
+                            <td>3700112233</td>
+                            <td>Công ty TNHH MTV Biển Xanh (Fake)</td>
+                            <td><span class="badge badge-warning">Địa chỉ không tồn tại</span></td>
+                            <td>01/12/2025</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guide Section -->
+    <section id="guide" class="guide-section">
+        <div class="container">
+            <div class="guide-card">
+                <h3><i class="fas fa-book-reader"></i> Hướng Dẫn Xử Lý Hóa Đơn Rủi Ro</h3>
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-num">1</div>
+                        <div class="step-desc">
+                            <h4>Kiểm tra tra cứu</h4>
+                            <p>Dùng công cụ này để check trạng thái MST người bán trước khi thanh toán.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-num">2</div>
+                        <div class="step-desc">
+                            <h4>Yêu cầu giải trình</h4>
+                            <p>Nếu thấy trạng thái cảnh báo, yêu cầu bên bán cung cấp chứng từ nộp thuế gần nhất.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-num">3</div>
+                        <div class="step-desc">
+                            <h4>Kê khai điều chỉnh</h4>
+                            <p>Nếu lỡ kê khai hóa đơn bỏ trốn, hãy chủ động loại bỏ và nộp lại tờ khai để tránh phạt
+                                nặng.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 E-Invoice Checker. Đề tài lớp AC24M - Đại Học Đông Á.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Mock Checker Logic
+        function checkMST() {
+            const input = document.getElementById('mstInput').value;
+            const resultDiv = document.getElementById('searchResult');
+
+            if (input.length < 10) {
+                alert("Vui lòng nhập Mã số thuế hợp lệ!");
+                return;
+            }
+
+            // Simple mock logic
+            resultDiv.style.display = 'block';
+            if (input === '0101234567' || input === '0309876543') {
+                resultDiv.className = 'search-result danger';
+                resultDiv.innerHTML = `
+                    <i class="fas fa-times-circle"></i>
+                    <div>
+                        <h4>CẢNH BÁO: RỦI RO CAO</h4>
+                        <p>Doanh nghiệp này có trạng thái: <strong>Ngừng hoạt động / Bỏ trốn</strong></p>
+                    </div>
+                `;
+            } else {
+                resultDiv.className = 'search-result success';
+                resultDiv.innerHTML = `
+                    <i class="fas fa-check-circle"></i>
+                    <div>
+                        <h4>HOẠT ĐỘNG BÌNH THƯỜNG</h4>
+                        <p>Doanh nghiệp đang nộp thuế đầy đủ. (Dữ liệu giả lập)</p>
+                    </div>
+                `;
+            }
+        }
+    </script>
+</body>
+
+</html>
