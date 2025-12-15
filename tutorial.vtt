@@ -1,0 +1,129 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:59.000
+Google Anti-gravity là một công cụ lập trình AI siêu đỉnh, nhưng chỉ khi bạn biết dùng đúng cách thôi. Mình đã tìm ra một quy trình làm việc với Anti-gravity giúp bạn xây dựng app AI nhanh hơn nhiều. Nếu bạn theo mình đến cuối video, không chỉ thành thạo được Anti-gravity mà còn có một app hoàn chỉnh do chính bạn làm, dù trước đó chưa từng code lần nào. Giờ thì, cùng mình bắt đầu nhé. Vậy là Google Anti-gravity, công cụ lập trình AI mới toanh của Google, hoàn toàn miễn phí tải về. Bạn vào trang web đi. Mình sẽ để link ở đây.
+
+2
+00:00:30.000 --> 00:01:20.000
+Link ở dưới đây nè. Tải ngay đi. Dùng miễn phí luôn. Hiện có rất nhiều tính năng miễn phí. Nên bạn có thể tha hồ xây dựng mà không phải trả gì hết. Lúc đầu có vài lỗi nhỏ, nhưng giờ thì hầu như đã fix hết rồi. Vậy nên cài đặt xong bạn sẽ thấy màn hình này. Có lẽ nó giống kiểu bạn hay thấy trong cursor hay wind surf ấy. Khác ở chỗ là trong anti-gravity mình sẽ không dùng màn hình này đâu. Thực ra mình sẽ làm như thế này.
+
+3
+00:00:55.000 --> 00:01:55.000
+Mở cái trình quản lý agent này ra nhé. Đây chính là nơi mà sức mạnh thật sự của anti-gravity nằm. Bấm vào đó, nó sẽ mở trình quản lý agent này lên. Quy trình mình sắp chỉ cho bạn liên quan đến workspace, các agent bên trong workspace và cả playground nữa. Những thứ này cực kỳ đặc biệt chỉ có ở anti-gravity thôi. Vậy thì bắt đầu nào. Chúng ta cùng xây dựng một app, trong lúc làm mình sẽ chỉ cho bạn tất cả những tính năng hay ho này và chia sẻ quy trình làm việc đỉnh cao của mình để bạn tận dụng được nhiều hơn nữa.
+
+4
+00:01:25.000 --> 00:02:18.000
+năng suất từ chống trọng lực. Chúng ta sẽ xây dựng một app đầu tư chứng khoán và tin tức giúp theo dõi các công ty khác nhau, xem giá cổ phiếu, xem tin tức mới nhất của họ và nhận phân tích AI. Nếu bạn làm được cái này thì sẽ rất hữu ích đấy. Theo mình làm nhé, mình sẽ hoàn thành cùng nhau. Nhớ mở một không gian làm việc và tạo một thư mục mới trong đó. Giờ bạn sẽ có một agent mới làm việc trong không gian đó. Chúng ta sẽ nhập prompt này vào. Mình cũng sẽ để dưới đây cho bạn. Mình muốn xây dựng...
+
+5
+00:01:52.000 --> 00:02:47.000
+Một ứng dụng web đầu tư sử dụng Nex.js và Tailwind V3. Mình muốn có thể nhập mã chứng khoán, rồi nó sẽ hiện biểu đồ giá cùng với tin tức mới nhất về công ty đó. Dùng ảnh chụp màn hình đính kèm làm cảm hứng về giao diện app. Không cần viết code, chỉ cần lên kế hoạch cho mình thôi. À, còn vài việc liên quan đến chống trọng lực, cụ thể là Gemini 3. Cần dùng cảm hứng UI. Cách mình thích nhất để lấy cảm hứng UI là qua Vzero. Mấy ngày trước mình xem một buổi livestream.
+
+6
+00:02:19.000 --> 00:03:23.000
+Trước đây, mình đã thử hết tất cả các app AI để xem app nào làm UI ngon nhất. Người thắng cuộc rõ ràng là V0. Thế nên, bạn chỉ cần vào V0 rồi mô tả UI bạn muốn. Nó sẽ tạo ra rất nhanh, sau đó mình chụp màn hình, quay lại đây, dán vào agent của mình và dùng đó làm cảm hứng hình ảnh. Gemini 3 làm UI cực đỉnh, nhưng chỉ khi bạn có hình ảnh để tham khảo. Nên nếu muốn, bạn cứ vào V0, mô tả kiểu UI bạn cần, hoặc lấy bất kỳ app nào khác cũng được.
+
+7
+00:02:52.000 --> 00:03:34.000
+thích và chụp màn hình cái đó để lấy cảm hứng hình ảnh. Chúng ta cũng sẽ chắc chắn là đang ở chế độ lên kế hoạch. Ở đây có một mục thả xuống, kế hoạch và nhanh. Điều thú vị là chế độ lên kế hoạch không phải kiểu lên kế hoạch bạn thường thấy đâu. Nó vẫn viết code, mà mình cũng không hiểu lắm, và hy vọng Google sẽ sửa cái này. Nói chung là có hai kiểu: kế hoạch và nhanh, trong đó kế hoạch thực ra chỉ là chế độ chậm thôi, nó suy nghĩ nhiều hơn. Vậy nên bây giờ mình sẽ nói là...
+
+8
+00:03:13.000 --> 00:04:12.000
+Đừng viết code nhé. Nên nó hiểu là mình chỉ muốn lên kế hoạch thôi. Nói vậy, mình sẽ bấm gửi và nó sẽ bắt đầu làm việc. Chỉ lát nữa sau khi nó tạo xong phiên bản đầu tiên của app, mình sẽ chỉ cho các bạn mấy điểm thú vị độc đáo của anti-gravity. Đây là cái hay ho của anti-gravity đó. Trong khi nó xây dựng, nó còn tạo ra mấy tài liệu phụ nữa. Như bạn thấy, kế hoạch thực hiện này, mình có thể bấm mở xem trong lúc nó đang làm. Nó đã tạo xong toàn bộ rồi.
+
+9
+00:03:42.000 --> 00:04:32.000
+tài liệu với kế hoạch triển khai. Thường thì nhiều cái trình tạo AI này, họ chỉ làm kế hoạch trực tiếp luôn. Tức là chỉ làm trong console thôi. Nó sẽ chạy xuống và đặt kế hoạch ở giữa. Với anti-gravity thì cực đỉnh luôn. Mọi thứ nó tạo ra đều là artifact, tức là tài liệu bạn có thể xem lại và đọc trong lúc nó đang làm việc cho bạn. Nên cực kỳ quan trọng là khi nó lên kế hoạch, khi nó xây dựng, bạn phải đọc hết tất cả artifact, đọc hết tất cả kế hoạch, vì như vậy sẽ dễ dàng hơn nhiều.
+
+10
+00:04:08.000 --> 00:04:57.000
+hiểu được mục đích của nó. Và còn có mấy tính năng rất hay với những artifact này mà mình sẽ nói sau. Nhưng điều này sẽ thay đổi cách bạn xây dựng ứng dụng đấy. Ổn rồi, nó đã lập kế hoạch, thực hiện xong kế hoạch. Giờ có vẻ như nó đã sẵn sàng. Mình thích cái này, nó tạo ra một bản hướng dẫn giải thích chi tiết mọi thứ nó đã xây dựng. Giờ thì mình có thể chạy được rồi. Đây là điều tuyệt vời về cách chống trọng lực hoạt động. Khi agent của chúng ta đang xây dựng đây, thực ra...
+
+11
+00:04:32.000 --> 00:05:32.000
+thử app luôn khi nó đang chạy. Nên bạn sẽ thấy trình duyệt tích hợp này, nó mở luôn app đang xây dựng và test trực tiếp, đồng thời chụp màn hình. Với mấy công cụ làm app AI khác, bạn phải tự tay test từng thứ một. Anti-gravity là do Google làm, mà Google cũng làm Chrome mà, nên hiển nhiên họ có thể tích hợp luôn việc test end-to-end trong anti-gravity. Nhưng không chỉ vậy, mình còn có thể tương tác với nó trong lúc chạy và để lại ghi chú nữa. Ví dụ, mình muốn thêm một cái gì đó.
+
+12
+00:05:02.000 --> 00:06:03.000
+Phần crypto ngay đây nè. Mình có thể bôi đen ảnh chụp màn hình rồi để lại bình luận kiểu như thêm phần crypto vào và ghi chú luôn, rồi thêm comment. Giờ nó sẽ bắt đầu làm việc dựa trên những ghi chú của mình. Mẹo hay ở đây là khi nó hoạt động, bạn nên chú ý mấy cái ảnh chụp màn hình và công việc nó đang làm, rồi để lại ghi chú ngay trong mấy file media nó tạo ra. Như vậy nó sẽ chỉnh sửa chính xác hơn đúng theo ý bạn muốn. Cái này thật sự rất mạnh mẽ luôn.
+
+13
+00:05:33.000 --> 00:06:29.000
+mấy công cụ khác cũng đang làm cái này đấy. Vậy là coi như xong để test rồi. Mình mở localhost lên xem thử nó thế nào. À, ra rồi, đây là app. Thật sự trông khá ổn so với phiên bản đầu tiên. Wow, lúc mình xem thì thấy nó tự động mở ra và test luôn rồi. Nghĩa là nó đang kiểm soát hoàn toàn Google Chrome của mình và test từng phần của app. Khi tải anti-gravity thì bạn nhớ tải thêm cái này nữa nhé.
+
+14
+00:06:00.000 --> 00:06:51.000
+extension trình duyệt chống trọng lực vì nhìn này. Nó thực sự tự động đi vòng quanh và nhấp vào mấy cái đó. Thậm chí không phải mình làm đâu. Nó tự động nhấp vào các tính năng và kiểm tra giúp bạn. Đây thực sự là lần gần nhất chúng ta có một “nhân viên AI” làm việc cho mình. Thật sự ấn tượng. Nhưng mà này, đây còn chưa bằng 10% những gì làm cho chống trọng lực đặc biệt đâu. V1 trông thì ngầu đó. Mình đã chỉ bạn cách chú thích ảnh chụp màn hình khi nó đang test rồi. Và mình...
+
+15
+00:06:26.000 --> 00:07:16.000
+mình sẽ cho bạn xem nó tự kiểm tra như thế nào. Nhưng đây là điểm mà chống trọng lực trở nên rất đặc biệt. Thế là mình có V1 rồi. Bắt đầu thôi. Mình sẽ tạo thêm nhiều agent trong trình quản lý agent để làm các công việc khác cho mình. Mình sẽ nhấn vào dấu cộng bên cạnh dự án. Rồi mình sẽ bảo nó, tôi muốn bạn làm agent quản lý sản phẩm. Xem qua app của chúng ta và làm cho tôi một kế hoạch phát triển các tính năng tiếp theo có thể xây dựng. Thế là mình sẽ biến nó thành quản lý sản phẩm và để nó lên kế hoạch phát triển. Và thế là xong, chỉ có vậy thôi.
+
+16
+00:06:51.000 --> 00:07:36.000
+Thấy agent thứ hai chạy rồi. Nhưng mà làm thế này đi. Giờ mình tạo một agent marketing. Mình sẽ bảo nó, "Tôi muốn bạn làm agent marketing. Viết cho tôi một bài blog và năm tweet để thông báo về app của chúng ta cùng tất cả tính năng." Xong. Giờ nó sẽ bắt đầu viết nội dung marketing cho app đầu tư cổ phiếu đó. Nhưng làm tiếp nhé. Tạo thêm một agent nữa. Mình sẽ bảo nó, "Cho phép chúng ta thêm số lượng cổ phiếu đang sở hữu vào mỗi mã để có thể theo dõi danh mục đầu tư và xem được."
+
+17
+00:07:14.000 --> 00:08:08.000
+"bao nhiêu tiền chúng ta thắng thua mỗi ngày." Mình sẽ gửi luôn đoạn đó. Giờ thì có thêm một agent khác đang giúp mình phát triển app. Trong lúc làm mấy cái này, mình vừa nảy ra ý tưởng cho một app mới nữa. Mình mới nghĩ ra ý tưởng cho một game bắn súng góc nhìn thứ nhất 3D. Mình là game thủ cuồng mà, muốn làm một game 3D. Thế là mình sẽ vào playground của mình. Playground là gì à? Là nơi mình thử nghiệm và thử mấy cái mới đó.
+
+18
+00:07:41.000 --> 00:08:38.000
+ý tưởng. Cách mình hay nghĩ về chuyện này là khi mình đang xây dựng, đang làm việc trên các dự án chính trong không gian làm việc, nếu có ý tưởng khác, mình sẽ vào khu playground để thử nghiệm. Nếu bạn giống mình, bạn sẽ nghĩ ra 50, 60 ý tưởng app mới mỗi ngày. Bạn mở hàng loạt cửa sổ Visual Studio Code khác nhau. Cả máy tính của bạn chậm lại vì bạn mở tới 40 cửa sổ Visual Studio Code. Nhưng mấy cái playground này giúp mọi thứ dễ dàng hơn nhiều vì thay vì tạo ra hàng tá file thì...
+
+19
+00:08:09.000 --> 00:08:59.000
+windows trong code, nó chỉ tạo ra một thí nghiệm nhỏ để bạn thử nghiệm và kiểm tra thôi. Nếu bạn thích ý tưởng đó, bạn có thể chuyển nó sang một workspace riêng và phát triển toàn bộ app. Vậy nên, mình làm thử nhé. Mình sẽ nói trong một playground mới, mình muốn làm một game bắn súng góc nhìn thứ nhất 3D dùng 3JS. Làm cho nó ngầu và phong cách. Mình bấm gửi. Giờ nó sẽ bắt đầu làm việc trong playground này để xây dựng game đó. Mình không cần mở thêm năm cửa sổ nữa, chỉ việc bắt đầu thôi.
+
+20
+00:08:34.000 --> 00:09:27.000
+Ngay đây. Thế nên, tụi mình có mấy agent AI đang hoạt động, khu vực làm việc chính của tụi mình. Lại nhắc lại, đây là chỗ chứa mấy app quan trọng nhất. Rồi, có một agent đang vào khu playground, nơi tụi mình thử nghiệm. Có thể trò chơi này sẽ hay, cũng có thể không, phải chờ xem. Trong khi làm mấy việc đó, tụi mình có thể mở hộp thư đến, ngay đây nè. Hộp thư này hoạt động kiểu như chỗ mấy agent của tụi mình nhắn tin, trò chuyện và báo tin cập nhật tình hình. Nên khi có nhiều agent AI chạy cùng lúc, làm việc trên mấy dự án khác nhau thì nó sẽ giúp mình theo dõi dễ hơn.
+
+21
+00:09:00.000 --> 00:09:50.000
+Chúng ta có thể vào hộp thư đến để xem tất cả trạng thái của họ ở đâu. Cơ bản đây là nơi họ thường gửi email cho mình kiểu như, "Này, mình đã xong tính năng này rồi. Mình làm xong rồi đó, bạn thấy sao? Bạn duyệt hay không?" Vậy nên, mình vào đây. Mình đang ở trong hộp thư đến. Chúng ta có thể thấy, được rồi, AI agent của mình đang làm việc theo dõi danh mục đầu tư đã hoàn thành. Mình có thể kiểm tra nếu muốn. Chúng ta có AI agent quản lý sản phẩm cũng làm việc. Mình có thể mở cái sản phẩm đó ra. Và bạn có thể thấy ngay ở đây,
+
+22
+00:09:25.000 --> 00:10:20.000
+Đây là lộ trình của chúng ta. Giờ mình quay lại hộp thư đến. Xem xem agent marketing đang làm gì nhé. Nào, bắt đầu thôi. Nội dung ra mắt app marketing. Mình click vào đây xem sao. Nội dung marketing. Mở ra coi nào. Và boom. Có một bài blog cùng với năm tweet khác nhau mà nó viết cho app của mình. Mình lấy mấy cái này rồi bắt đầu đăng nội dung luôn. À, rồi hình như thử nghiệm playground, trò bắn súng góc nhìn thứ nhất 3D, cần mình duyệt. Mình sẽ bấm gửi cho nó.
+
+23
+00:09:53.000 --> 00:10:44.000
+Đó. Phê duyệt cái tòa nhà đang xây đó. Đây chính là cách nghĩ bạn cần thay đổi khi dùng công nghệ chống trọng lực. Bạn không còn là người chỉ làm app nữa mà thành người quản lý cả một doanh nghiệp một người luôn, đúng không? Bạn đang quản lý nhiều nhân viên AI khác nhau, mỗi người làm một việc riêng. Người làm marketing, người quản lý sản phẩm. Bạn có nhiều bộ phận trong công ty, đang chạy thử nhiều dự án khác nhau. Có cả bộ phận R&D đang thử nghiệm với game 3D nữa.
+
+24
+00:10:18.000 --> 00:11:21.000
+Thay vì phải mở 20 cửa sổ làm việc cùng lúc, giờ bạn chỉ có một hộp thư đến, cơ bản là hộp thư email của bạn, nơi các trợ lý của bạn liên lạc, xin bạn duyệt, báo khi tài liệu xong, báo khi tính năng hoàn thành. Đây là sự chuyển đổi từ việc hướng dẫn trực tiếp sang quản lý hoàn toàn. Và mình nghĩ đây chính là tương lai của việc xây dựng với AI. Đây là trước khi chúng ta test app để xem nó đang ở đâu. Đây là quy trình làm việc bạn muốn dùng, đúng không? Bạn muốn cái trình quản lý trợ lý này luôn bật trên màn hình của bạn. Nếu màn hình của bạn không...
+
+25
+00:10:50.000 --> 00:11:42.000
+Màn hình đủ lớn, đặt một cái iPad hoặc thêm một màn hình thứ hai. Luôn để nó bật suốt. Suốt cả ngày khi bạn nảy ra ý tưởng mới, bạn sẽ vào, tạo các khu thử nghiệm, chạy các thí nghiệm khác nhau, vào app bạn đang làm. Bạn tạo ra các agent mới để làm những công việc khác cho dự án chính, app chính của bạn, đồng thời để mắt tới hộp thư đến xem khi nào các agent hoàn thành công việc. Đây chính là quy trình làm việc bạn muốn dùng với anti-gravity mà bạn không thể thiếu.
+
+26
+00:11:16.000 --> 00:12:02.000
+Thật sự cũng giống mấy app khác thôi. Ờ, có vẻ như agent của mình đã xong phần theo dõi danh mục rồi. Vào xem thử nó trông thế nào nha. Ừm, đúng rồi, nó có chức năng mới rồi đó. Giờ có phần holdings rồi. Thế là bạn có thể nhập số cổ phiếu bạn đang nắm giữ của từng mã. Ngầu phết. Cái nút này làm gì vậy? Ồ, bạn có thể nhập số cổ phiếu của mình vào. Được rồi, thử xem nó chạy thế nào nhé. Mình sẽ nhập số cổ phiếu rồi nhấn lưu. Và boom. Bạn có thể thấy kết quả mới của mình rồi.
+
+27
+00:11:39.000 --> 00:12:30.000
+kích thước danh mục đầu tư. À, và tổng giá trị để xem hôm đó tăng bao nhiêu. Thật tuyệt vời. Đây thực ra là một app đầu tư mà mình sẽ dùng. Thật sự rất cool. Đây là kiểu app hay nhất để làm, kiểu mà bạn thật sự sẽ dùng và cải thiện cuộc sống của mình. Thật tuyệt. Vừa nãy mình quay lại với AI agent của chúng ta, và điều này thật hay. Nó đang làm tiếp trang dashboard crypto đó. Nhớ cái chú thích mình làm lúc trước không? Giờ nó đã lấy đó làm việc tiếp theo cần làm rồi.
+
+28
+00:12:04.000 --> 00:12:59.000
+tự động nhập vào luôn. Nên, lại một tính năng tuyệt vời nữa ở đây. Bất cứ ảnh chụp màn hình hay bài test nào nó làm, bạn có thể nhanh chóng ghi chú và thêm lệnh ngay khi đang làm. Họ nghĩ tới từng chi tiết nhỏ trong anti-gravity thật sự rất ấn tượng. Và có vẻ như mình còn chưa test xong phần quản lý danh mục đầu tư. Giờ thì có vẻ ổn với mảng crypto rồi. Mình chấp nhận thử và xem nó ra sao. Và bam. Chỉ có vậy thôi, nó mở ra luôn. Bạn có thể thấy crypto mới đây rồi đấy.
+
+29
+00:12:32.000 --> 00:13:33.000
+Tùy chọn bên trái cùng với giá tiền điện tử ở đây. Thật tuyệt vời. Kiểu này làm mọi thứ nhanh hơn hẳn đúng không? Bạn quản lý các agent, ghi chú trực tiếp lên ảnh chụp màn hình khi làm việc. Bạn tạo thêm playground và agent mới mỗi khi nghĩ ra ý tưởng hay tính năng mới. Và bạn đã từ người hướng dẫn từng bước chuyển thành quản lý toàn diện. Đó chính là sự thay đổi tư duy cần có để dùng anti-gravity. Nhưng vẫn còn vài điểm chưa ổn mà Google cần chỉnh sửa với anti-gravity trong Gemini 3.
+
+30
+00:13:02.000 --> 00:13:50.000
+Chủ yếu là về việc làm theo hướng dẫn. Có vẻ nó vẫn chưa giỏi lắm trong việc làm theo hướng dẫn. Có mấy thứ bạn bảo nó làm thì nó không chịu làm. Nhưng trong bản demo này, mình không gặp phải chuyện đó. Nên cũng ổn đấy. Nhưng mình nghĩ điểm khác biệt lớn nhất giữa Gemini 3 hiện tại và Claude là Gemini vẫn còn nhiều chỗ chưa mượt, bạn bảo nó làm gì thì nó không làm hoàn hảo. Nhưng chắc chắn sẽ cải thiện được. Google có khoảng 20 nghìn tỷ lập trình viên mà, mình tin là vậy.
+
+31
+00:13:26.000 --> 00:14:15.000
+Họ sẽ tự tìm ra cách thôi. Nhưng đây là quy trình bạn nên dùng. Tạo nhiều agent trong workspace của bạn. Dùng playground để thử nghiệm suốt ngày. Rồi mở inbox liên tục để bạn luôn theo dõi được agent đang làm gì và khi nào cần bạn duyệt. Nếu bạn để cái này mở suốt trên màn hình, bạn sẽ làm được nhiều việc hơn hẳn. Bạn đã dùng anti-gravity chưa? Comment cho mình biết với nhé. Mình cũng vừa mới ra mắt Vibe Coding Academy.
+
+32
+00:13:51.000 --> 00:14:30.000
+Đây là cộng đồng riêng của mình, nơi có khóa học master về code Claude đầy đủ và cả buổi họp hàng tuần với mình để trả lời mọi câu hỏi của bạn. Mình sẽ giúp bạn từng bước xây dựng app. Link bên dưới nha, vào xem thử đi. Nếu bạn học được gì thì nhớ like nhé. Đăng ký kênh và bật thông báo luôn. Mình chỉ làm mấy video siêu hay về xây dựng với AI thôi. Hẹn gặp bạn ở video tiếp theo nhé!

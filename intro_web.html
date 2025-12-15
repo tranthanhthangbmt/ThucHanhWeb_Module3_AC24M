@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hướng Dẫn Thực Hành Web Kế Toán (No-code) - Lớp AC24M</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Roboto+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .tutorial-section {
+            background: white;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+        }
+
+        .tutorial-step {
+            margin-bottom: 30px;
+            padding-left: 20px;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .tutorial-step h3 {
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+        }
+
+        .code-block {
+            background: #f1f5f9;
+            padding: 15px;
+            border-radius: 8px;
+            font-family: 'Roboto Mono', monospace;
+            margin: 10px 0;
+            white-space: pre-wrap;
+            font-size: 0.9rem;
+            border: 1px solid #ddd;
+        }
+
+        .highlight-box {
+            background-color: #eff6ff;
+            border: 1px solid #bfdbfe;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        .step-number {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background: var(--primary-color);
+            color: white;
+            text-align: center;
+            line-height: 30px;
+            border-radius: 50%;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
+        .topic-card {
+            background: #fff;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            transition: transform 0.2s;
+        }
+
+        .topic-card:hover {
+            transform: translateY(-2px);
+            border-color: var(--primary-color);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .topic-title {
+            color: var(--primary-color);
+            font-weight: 700;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .topic-badge {
+            font-size: 0.75rem;
+            padding: 2px 8px;
+            border-radius: 12px;
+            background: #e0f2fe;
+            color: #0369a1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <a href="index.html" class="back-to-menu-btn"
+        style="position: fixed; top: 20px; left: 20px; background-color: #2563eb; color: white; padding: 10px 20px; border-radius: 30px; text-decoration: none; font-weight: 600; box-shadow: 0 4px 6px rgba(0,0,0,0.1); z-index: 9999; display: flex; align-items: center; gap: 8px;">
+        <i class="fas fa-arrow-left"></i> Trang Chủ
+    </a>
+
+    <header>
+        <div class="container header-content">
+            <h1>Hướng Dẫn Thực Hành Web Kế Toán</h1>
+            <p>Module Kỹ Năng Số (No-code AI) - Lớp AC24M - Đại Học Đông Á</p>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <div class="tutorial-section">
+            <h2 style="margin-bottom: 30px; text-align: center;">Quy Trình 7 Bước Xây Dựng Web Fintech</h2>
+
+            <!-- Step 1 -->
+            <div class="tutorial-step">
+                <h3><span class="step-number">1</span>Cài Đặt Công Cụ AI</h3>
+                <p>Sử dụng <strong>Google Antigravity</strong> (hoặc Cursor/Windsurf) để hỗ trợ viết code tự động.</p>
+                <div class="highlight-box" style="text-align: center;">
+                    <a href="https://www.googleantigravity.org/" target="_blank" class="btn"
+                        style="background: var(--primary-color); color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none;">
+                        <i class="fas fa-download"></i> Tải Google Antigravity
+                    </a>
+                </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="tutorial-step">
+                <h3><span class="step-number">2</span>Chọn Đề Tài (Persona)</h3>
+                <p>Sinh viên chọn 1 trong 4 nhóm đề tài bên dưới để thực hiện đồ án môn học.</p>
+
+                <!-- Topic 1 -->
+                <div class="topic-card">
+                    <div class="topic-title">
+                        1. TaxAlert - Trợ Lý Pháp Lý
+                        <span class="topic-badge">Tin tức & Cảnh báo</span>
+                    </div>
+                    <p><strong>Persona:</strong> Kế toán thuế sợ bỏ sót văn bản luật mới.</p>
+                    <p><strong>Yêu cầu:</strong> Dashboard tin tức, lịch nộp thuế đếm ngược, phân loại văn bản (GTGT,
+                        TNDN).</p>
+                </div>
+
+                <!-- Topic 2 -->
+                <div class="topic-card">
+                    <div class="topic-title">
+                        2. SmartBooks - Kế Toán Cho Startup
+                        <span class="topic-badge">Dịch vụ & Landing Page</span>
+                    </div>
+                    <p><strong>Persona:</strong> Startup cần dịch vụ kế toán tiết kiệm, minh bạch.</p>
+                    <p><strong>Yêu cầu:</strong> Bảng giá so sánh (Thuê ngoài vs Nội bộ), Form đăng ký tư vấn, Case
+                        study khách hàng.</p>
+                </div>
+
+                <!-- Topic 3 -->
+                <div class="topic-card">
+                    <div class="topic-title">
+                        3. FinRate Hub - Sàn Tỷ Giá
+                        <span class="topic-badge">Data Dashboard</span>
+                    </div>
+                    <p><strong>Persona:</strong> Kế toán thanh toán cần theo dõi tỷ giá USD/EUR để tối ưu dòng tiền.</p>
+                    <p><strong>Yêu cầu:</strong> Biểu đồ biến động, Ticker chạy giá, Máy tính quy đổi ngoại tệ.</p>
+                </div>
+
+                <!-- Topic 4 -->
+                <div class="topic-card">
+                    <div class="topic-title">
+                        4. E-Invoice Checker - Soi Hóa Đơn
+                        <span class="topic-badge">Tiện ích & Audit</span>
+                    </div>
+                    <p><strong>Persona:</strong> Kế toán công nợ lo sợ nhận phải hóa đơn của doanh nghiệp bỏ trốn.</p>
+                    <p><strong>Yêu cầu:</strong> Tra cứu MST, Upload XML kiểm tra, Danh sách Blacklist rủi ro.</p>
+                </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="tutorial-step">
+                <h3><span class="step-number">3</span>Viết Prompt (Ra Lệnh Cho AI)</h3>
+                <p>Copy các Prompt mẫu dưới đây vào khung chat của AI để tạo giao diện ban đầu.</p>
+
+                <div class="highlight-box">
+                    <strong>Mẫu Prompt Tạo Giao Diện (Ví dụ cho Topic 3 - FinRate Hub):</strong>
+                    <div class="code-block">"Tôi muốn tạo một Dashboard theo dõi tỷ giá ngân hàng có tên là 'FinRate
+                        Hub'.
+                        Yêu cầu:
+                        - Giao diện: Dark Mode chuyên nghiệp (màu đen, xám, xanh neon).
+                        - Bố cục: Có Sidebar bên trái, phần nội dung chính bên phải.
+                        - Nội dung chính:
+                        + Một thanh trượt (Ticker) hiển thị tỷ giá USD, EUR, JPY.
+                        + Hai biểu đồ (Chart.js): Một biểu đồ đường thể hiện biến động USD trong 30 ngày, một biểu đồ
+                        cột thể hiện lãi suất.
+                        + Một bảng so sánh tỷ giá giữa Vietcombank, Techcombank, ACB.
+                        - Viết code HTML và CSS (trong file style.css riêng) đầy đủ và đẹp mắt."</div>
+                </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="tutorial-step">
+                <h3><span class="step-number">4</span>Tạo Nội Dung Chuyên Ngành (Content AI)</h3>
+                <p>Sử dụng AI để viết nội dung "thật" và chuyên nghiệp, thay vì dùng văn bản giả (Lorem Ipsum).</p>
+
+                <div class="highlight-box">
+                    <strong>Prompt Tạo Nội Dung (Topic 1 - TaxAlert):</strong>
+                    <div class="code-block">"Đóng vai chuyên gia tư vấn thuế, hãy viết một đoạn cảnh báo ngắn (khoảng 50
+                        từ) về mức phạt chậm nộp tờ khai thuế GTGT theo Nghị định 125. Giọng văn nghiêm khắc nhưng mang
+                        tính nhắc nhở hỗ trợ."</div>
+
+                    <strong style="display:block; margin-top:15px;">Prompt Tạo Chính Sách Bảo Mật (Topic 4 - Invoice
+                        Check):</strong>
+                    <div class="code-block">"Viết một cam kết bảo mật dữ liệu cho người dùng khi họ upload file XML hóa
+                        đơn lên hệ thống. Cam kết không lưu trữ dữ liệu, tuân thủ Luật An ninh mạng, giọng văn tạo sự an
+                        tâm tuyệt đối."</div>
+                </div>
+            </div>
+
+            <!-- Step 5 -->
+            <div class="tutorial-step">
+                <h3><span class="step-number">5</span>Mẹo Nâng Cao: Cào Dữ Liệu Tự Động (Data Scraping)</h3>
+                <p>Dành cho các nhóm muốn lấy dữ liệu thật từ website ngân hàng (Ví dụ: Vietcombank, General Dept of
+                    Taxation).</p>
+                <div class="highlight-box" style="background: #ffffff; border-color: #f59e0b;">
+                    <div style="color: #d97706; font-weight: bold; margin-bottom: 5px;"><i class="fas fa-lightbulb"></i>
+                        Prompt Cho Google Antigravity:</div>
+                    <div class="code-block" style="border-left: 4px solid #f59e0b;">"Hãy viết cho tôi một đoạn mã Python
+                        đơn giản sử dụng thư viện BeautifulSoup để lấy dữ liệu tỷ giá USD từ trang web của Ngân hàng
+                        Vietcombank.
+                        Sau đó, hãy hướng dẫn tôi cách tích hợp hoặc hiển thị dữ liệu này lên trang web HTML mà tôi đang
+                        xây dựng."</div>
+                    <p style="font-size: 0.9rem; color: #666; margin-top: 10px;">*Lưu ý: AI sẽ hướng dẫn bạn cách chạy
+                        script Python để lấy data và lưu vào file JSON/CSV để web đọc.</p>
+                </div>
+            </div>
+
+            <!-- Step 6 -->
+            <div class="tutorial-step">
+                <h3><span class="step-number">6</span>Đưa Lên GitHub (Nộp Bài)</h3>
+                <ol style="margin-left: 20px; margin-top: 10px;">
+                    <li>Tạo tài khoản tại <a href="https://github.com/" target="_blank">GitHub.com</a>.</li>
+                    <li>Tạo <strong>New Repository</strong>.</li>
+                    <li>Upload toàn bộ thư mục dự án (index.html, style.css, script.js, images...) lên.</li>
+                    <li>Vào <strong>Settings -> Pages</strong>, chọn Branch <strong>main</strong> và Save.</li>
+                    <li>Copy đường link (VD: <code>username.github.io/my-project</code>) để nộp cho giảng viên.</li>
+                </ol>
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Khoa Kế Toán - Đại Học Đông Á. Tài liệu hướng dẫn nội bộ.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
